@@ -1,7 +1,7 @@
 import DashboardHeader from "@/components/DashboardHeader";
-import { User } from "@/lib/generated/prisma/client";
 import AdminDashboardCard from "./AdminDashboardCard";
 import UpcomingMeetings from "./UpcomingMeetings";
+import { User } from "@prisma/client";
 
 type AdminDashboardprops = {
   user: User | null;
