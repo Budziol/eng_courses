@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { GhostLink, PrimaryLink } from "../../../../components/Links";
-import { User } from "@/lib/generated/prisma/client";
+import { User } from "@prisma/client";
 
 const MobileNavMenu = ({ user, close }: { user: User; close: () => void }) => {
   return (
