@@ -4,7 +4,7 @@ import { formatDate } from "@/lib/hooks/formatDate";
 import { getLatestPayment } from "../../app/admin/uzytkownik/actions/getLatestPayment";
 import { useEffect, useState, useTransition } from "react";
 import Loader from "@/components/Loaders/Loader";
-import { Payment } from "@/lib/generated/prisma/client";
+import { Payment } from "@prisma/client";
 
 type Props = {
   userId: string;

@@ -1,6 +1,5 @@
 "use client";
 
-import { Prisma } from "@/lib/generated/prisma/client";
 import { useEffect } from "react";
 
 const MeetingCard = ({ data }: { data: any }) => {
