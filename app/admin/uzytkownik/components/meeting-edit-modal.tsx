@@ -1,6 +1,5 @@
 import Loader from "@/components/Loaders/Loader";
 import ModalBackground from "@/components/modal-background";
-import { Meeting, User } from "@/lib/generated/prisma/client";
 import PaymentModalStatus from "./payment-modal-status";
 import MeetingForm from "@/components/Meetings/meeting-form";
 import { startTransition, useActionState } from "react";
@@ -13,6 +12,7 @@ import {
   updateUserMeeting,
   UpdateUserMeetingState,
 } from "../actions/updateUserMeeting";
+import { Meeting, User } from "@prisma/client";
 
 type Props = {
   user: User;

@@ -1,11 +1,11 @@
 import DashboardHeader from "@/components/DashboardHeader";
 import LevelWrapper from "@/app/(dashboard)/panel/components/level-wrapper";
 import Loader from "@/components/Loaders/Loader";
-import { User } from "@/lib/generated/prisma/client";
 import { CalendarDays } from "lucide-react";
 import { Suspense } from "react";
 import UpcomingMeeting from "./upcoming-meeting";
 import Table from "@/app/admin/spotkania/components/meetings-table";
+import { User } from "@prisma/client";
 
 type UserDashboardProps = {
   user: User;

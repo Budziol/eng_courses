@@ -2,9 +2,9 @@
 
 import ProgressCard from "@/components/ProgressCard";
 import { PrimaryButton } from "@/components/Buttons";
-import { Level, User } from "@/lib/generated/prisma/client";
 import { useState } from "react";
 import LevelEditModal from "./level-edit-modal";
+import { Level, User } from "@prisma/client";
 
 type Props = {
   user: User;

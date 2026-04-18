@@ -1,7 +1,7 @@
-import { Payment } from "@/lib/generated/prisma/client";
 import { formatDate } from "@/lib/hooks/formatDate";
 import PaymentBadge from "../../../../components/Payments/payment-badge";
 import { SquarePen } from "lucide-react";
+import { Payment } from "@prisma/client";
 
 type Props = {
   data: Payment[];

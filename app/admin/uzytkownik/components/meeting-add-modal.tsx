@@ -1,13 +1,13 @@
 "use client";
 
 import ModalBackground from "@/components/modal-background";
-import { Meeting, User } from "@/lib/generated/prisma/client";
 import { addUserMeeting, AddUserMeetingState } from "../actions/addUserMeeting";
 import { useActionState, useEffect, useState } from "react";
 import Loader from "@/components/Loaders/Loader";
 import { PrimaryButton } from "@/components/Buttons";
 import MeetingLatestInfo from "./meeting-latest-info";
 import MeetingForm from "@/components/Meetings/meeting-form";
+import { Meeting, User } from "@prisma/client";
 
 type Props = {
   user: User;

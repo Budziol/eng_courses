@@ -14,7 +14,7 @@ import {
 } from "../actions/deleteUserPayment";
 import Loader from "@/components/Loaders/Loader";
 import PaymentModalStatus from "./payment-modal-status";
-import { Payment, User } from "@/lib/generated/prisma/client";
+import { Payment, User } from "@prisma/client";
 
 type Props = {
   user: User;

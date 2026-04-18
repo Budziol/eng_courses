@@ -1,9 +1,9 @@
 "use client";
 
 import { PrimaryButton, SecondaryButton } from "@/components/Buttons";
-import { Lvl } from "@/lib/generated/prisma/enums";
 import { LevelFormValues } from "@/lib/validators/level";
 import { LVL_LEVEL } from "@/utils/records";
+import { Lvl } from "@prisma/client";
 import { startTransition, useState } from "react";
 
 type Props = {

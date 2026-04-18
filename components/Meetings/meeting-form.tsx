@@ -4,8 +4,8 @@ import { startTransition, useState } from "react";
 import { PrimaryButton, SecondaryButton } from "../Buttons";
 import { formatDate } from "@/lib/hooks/formatDate";
 import { MeetingFormValues } from "@/lib/validators/meeting";
-import { MeetingStatus } from "@/lib/generated/prisma/enums";
 import { STATUS_LABELS } from "@/utils/records";
+import { MeetingStatus } from "@prisma/client";
 
 type Props = {
   userId: string;

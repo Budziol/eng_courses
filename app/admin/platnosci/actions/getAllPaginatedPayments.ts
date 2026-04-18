@@ -1,7 +1,7 @@
 import { getCurrentUser } from "@/app/(auth)/lib/auth";
-import { Prisma } from "@/lib/generated/prisma/client";
 import { prisma } from "@/lib/prisma";
 import { getPaymentsSearch } from "@/lib/search";
+import { Prisma } from "@prisma/client";
 
 export type PaymentsWithUser = Prisma.PaymentGetPayload<{
   include: { user: true };

@@ -1,6 +1,5 @@
 "use client";
 
-import { Payment, User } from "@/lib/generated/prisma/client";
 import PaymentForm from "@/components/Payments/payment-form";
 import { PrimaryButton, SecondaryButton } from "@/components/Buttons";
 import { useActionState, useState } from "react";
@@ -8,6 +7,7 @@ import { addUserPayment, AddUserPaymentState } from "@/actions/addUserPayment";
 import Loader from "@/components/Loaders/Loader";
 import ModalBackground from "@/components/modal-background";
 import PaymentLatestInfo from "@/components/Payments/payment-latest-info";
+import { Payment, User } from "@prisma/client";
 
 type Props = {
   user: User;

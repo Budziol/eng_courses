@@ -1,5 +1,5 @@
-import { Meeting } from "@/lib/generated/prisma/client";
-import { formatDate, formatDateWithHour } from "@/lib/hooks/formatDate";
+import { formatDateWithHour } from "@/lib/hooks/formatDate";
+import { Meeting } from "@prisma/client";
 
 type Props = {
   latestMeeting: Meeting | null;

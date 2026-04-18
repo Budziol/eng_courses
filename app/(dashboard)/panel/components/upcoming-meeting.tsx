@@ -1,7 +1,7 @@
-import { User } from "@/lib/generated/prisma/client";
 import { getUpcomingMeeting } from "../actions/getUpcomingMeetings";
 import { formatDate, formatDateWithHour } from "@/lib/hooks/formatDate";
 import { PrimaryLink } from "@/components/Links";
+import { User } from "@prisma/client";
 
 type Props = {
   user: User;

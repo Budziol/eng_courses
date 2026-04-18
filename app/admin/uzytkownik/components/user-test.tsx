@@ -1,4 +1,4 @@
-import { User } from "@/lib/generated/prisma/client";
+import { User } from "@prisma/client";
 import { getUserTest } from "../actions/getUserTest";
 
 type Props = {

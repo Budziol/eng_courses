@@ -1,7 +1,6 @@
 "use server";
 
 import { getCurrentUser } from "@/app/(auth)/lib/auth";
-import { Prisma } from "@/lib/generated/prisma/client";
 import { prisma } from "@/lib/prisma";
 import { cache } from "react";
 

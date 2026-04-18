@@ -1,7 +1,7 @@
-import { Meeting } from "@/lib/generated/prisma/client";
 import { formatDate, formatDateWithHour } from "@/lib/hooks/formatDate";
 import { SquarePen } from "lucide-react";
 import MeetingBadge from "../../../../components/Meetings/meeting-badge";
+import { Meeting } from "@prisma/client";
 
 type Props = {
   data: Meeting[];

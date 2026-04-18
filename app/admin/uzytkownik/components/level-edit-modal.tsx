@@ -1,13 +1,13 @@
 import { PrimaryButton } from "@/components/Buttons";
 import Loader from "@/components/Loaders/Loader";
 import ModalBackground from "@/components/modal-background";
-import { Level, User } from "@/lib/generated/prisma/client";
 import LevelEditForm from "./level-edit-form";
 import { useActionState, useEffect } from "react";
 import {
   updateUserLevel,
   UpdateUserLevelState,
 } from "../actions/updateUserLevel";
+import { Level, User } from "@prisma/client";
 
 type Props = {
   user: User;

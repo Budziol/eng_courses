@@ -1,10 +1,7 @@
 "use client";
 
 import { useEffect, useState, useTransition } from "react";
-import { Meeting, User } from "@/lib/generated/prisma/client";
 import Pagination from "@/components/Pagination/Pagination";
-import PaymentEditModal from "./payment-edit-modal";
-import PaymentAddModal from "./payment-add-modal";
 import { PrimaryButton } from "@/components/Buttons";
 import MeetingTable from "./meeting-table";
 import {
@@ -13,6 +10,7 @@ import {
 } from "../actions/getPaginatedMeetigns";
 import MeetingAddModal from "./meeting-add-modal";
 import MeetingEditModal from "./meeting-edit-modal";
+import { Meeting, User } from "@prisma/client";
 
 type Props = {
   user: User;

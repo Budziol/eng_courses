@@ -1,4 +1,4 @@
-import { User } from "@/lib/generated/prisma/client";
+import { User } from "@prisma/client";
 import { getUserLevel } from "../actions/getUserLevel";
 import UserLevel from "./user-level";
 

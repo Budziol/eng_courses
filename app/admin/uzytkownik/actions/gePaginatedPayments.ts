@@ -1,8 +1,8 @@
 "use server";
 
 import { getCurrentUser } from "@/app/(auth)/lib/auth";
-import { Payment, Prisma } from "@/lib/generated/prisma/client";
 import { prisma } from "@/lib/prisma";
+import { Payment } from "@prisma/client";
 import { unstable_cache } from "next/cache";
 
 type Props = {

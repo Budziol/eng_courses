@@ -1,7 +1,7 @@
 "use client";
 
-import { User } from "@/lib/generated/prisma/client";
 import { formatDate } from "@/lib/hooks/formatDate";
+import { User } from "@prisma/client";
 import { useState } from "react";
 
 type Props = {
