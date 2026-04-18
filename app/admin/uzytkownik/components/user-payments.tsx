@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState, useTransition } from "react";
-import { Payment, User } from "@/lib/generated/prisma/client";
+
 import {
   getPaginatedPayments,
   PaginatedResult,
@@ -11,6 +11,7 @@ import Pagination from "@/components/Pagination/Pagination";
 import PaymentEditModal from "./payment-edit-modal";
 import PaymentAddModal from "./payment-add-modal";
 import { PrimaryButton } from "@/components/Buttons";
+import { Payment, User } from "@prisma/client";
 
 type Props = {
   user: User;
