@@ -18,7 +18,7 @@ const MobilePagList = ({
           return (
             <PaginationItem
               key={pageNum}
-              handleClick={handleClick}
+              createPageURL={handleClick}
               currentPage={currentPage}
               text={pageNum.toString()}
             />
@@ -34,7 +34,7 @@ const MobilePagList = ({
             return (
               <PaginationItem
                 key={pageNum}
-                handleClick={handleClick}
+                createPageURL={handleClick}
                 currentPage={currentPage}
                 text={pageNum.toString()}
               />
@@ -49,7 +49,7 @@ const MobilePagList = ({
             return (
               <PaginationItem
                 key={pageNum}
-                handleClick={handleClick}
+                createPageURL={handleClick}
                 currentPage={currentPage}
                 text={pageNum.toString()}
               />
@@ -67,7 +67,7 @@ const MobilePagList = ({
           return (
             <PaginationItem
               key={pageNum}
-              handleClick={handleClick}
+              createPageURL={handleClick}
               currentPage={currentPage}
               text={pageNum.toString()}
             />
@@ -81,7 +81,7 @@ const MobilePagList = ({
               {currentPage > 1 && currentPage < 4 && (
                 <PaginationItem
                   key={pageNum}
-                  handleClick={handleClick}
+                  createPageURL={handleClick}
                   currentPage={currentPage}
                   text={pageNum.toString()}
                 />
@@ -96,7 +96,7 @@ const MobilePagList = ({
               {currentPage > totalPages - 4 && (
                 <PaginationItem
                   key={pageNum}
-                  handleClick={handleClick}
+                  createPageURL={handleClick}
                   currentPage={currentPage}
                   text={pageNum.toString()}
                 />
@@ -110,7 +110,7 @@ const MobilePagList = ({
           return (
             <PaginationItem
               key={pageNum}
-              handleClick={handleClick}
+              createPageURL={handleClick}
               currentPage={currentPage}
               text={pageNum.toString()}
             />
