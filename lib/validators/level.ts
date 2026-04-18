@@ -1,5 +1,5 @@
+import { Lvl } from "@prisma/client";
 import z from "zod";
-import { Lvl } from "../generated/prisma/enums";
 
 export const levelSchema = z.object({
   speaking: z.coerce

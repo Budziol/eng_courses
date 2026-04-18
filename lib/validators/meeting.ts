@@ -1,5 +1,5 @@
+import { MeetingStatus } from "@prisma/client";
 import z from "zod";
-import { MeetingStatus } from "../generated/prisma/enums";
 
 export const meetingSchema = z.object({
   date: z.coerce.date({
