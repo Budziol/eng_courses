@@ -1,10 +1,10 @@
 "use server";
 
 import { getCurrentUser } from "@/app/(auth)/lib/auth";
-import { MeetingStatus } from "@/lib/generated/prisma/enums";
 import { prisma } from "@/lib/prisma";
 import { meetingSchema } from "@/lib/validators/meeting";
-import { revalidateTag, updateTag } from "next/cache";
+import { MeetingStatus } from "@prisma/client";
+import { updateTag } from "next/cache";
 import z from "zod";
 
 export type AddUserMeetingState = {

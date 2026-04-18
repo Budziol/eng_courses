@@ -2,7 +2,6 @@
 
 import Pagination from "@/components/Pagination/Pagination";
 import UsersTable from "./users-table";
-import { User } from "@/lib/generated/prisma/client";
 import { useState, useTransition } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import SearchBar from "@/components/SearchBar";

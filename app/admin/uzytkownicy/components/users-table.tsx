@@ -1,6 +1,5 @@
 import Loader from "@/components/Loaders/Loader";
 import SmallLoader from "@/components/Loaders/small-loader";
-import { User } from "@/lib/generated/prisma/client";
 import { SquarePen } from "lucide-react";
 import PaymentBadge from "../../../../components/Payments/payment-badge";
 import { UserWithPayments } from "../actions/getPaginatedUsers";

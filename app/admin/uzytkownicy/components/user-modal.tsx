@@ -1,4 +1,3 @@
-import { User } from "@/lib/generated/prisma/client";
 import ModalPayments from "./modal-payments";
 import { UserWithPayments } from "../actions/getPaginatedUsers";
 import { DefaultLink } from "@/components/Links";

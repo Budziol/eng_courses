@@ -1,7 +1,6 @@
 "use client";
 
 import { PrimaryButton, SecondaryButton } from "@/components/Buttons";
-import { Payment } from "@/lib/generated/prisma/client";
 import {
   startTransition,
   useActionState,
@@ -17,6 +16,7 @@ import { addMonths, format } from "date-fns";
 import { formatDate } from "@/lib/hooks/formatDate";
 import Loader from "@/components/Loaders/Loader";
 import PaymentBadge from "../../../../components/Payments/payment-badge";
+import { Payment } from "@prisma/client";
 
 type Props = {
   payments: Payment[];
