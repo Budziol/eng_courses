@@ -2,9 +2,9 @@
 
 import { getCurrentUser } from "@/app/(auth)/lib/auth";
 import { prisma } from "@/lib/prisma";
-import { Prisma, User } from "@/lib/generated/prisma/client";
 import { cache } from "react";
 import { unstable_cache } from "next/cache";
+import { Prisma } from "@prisma/client";
 
 export type UserWithPayments = Prisma.UserGetPayload<{
   include: { payments: true };
