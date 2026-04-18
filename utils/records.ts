@@ -1,4 +1,4 @@
-import { Lvl, MeetingStatus } from "@/lib/generated/prisma/enums";
+import { Lvl, MeetingStatus } from "@prisma/client";
 
 export const STATUS_LABELS: Record<MeetingStatus, string> = {
   SCHEDULED: "Oczekujące",
