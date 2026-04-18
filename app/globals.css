@@ -8,19 +8,120 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-inter);
+  --color-main: #3688D6;
+  --color-main-hover: #41A2FF;
+  --color-secondary: #A3D2FF;
+  --color-secondary-hover: #C7E4FF;
+  --color-text-main: #667B99;
+  --color-text-sub: #1B2232;
+  --color-border: #e1e7ef;
+  --color-muted: #f8fafc;
+  --breakpoint-xs: 26.563rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@source inline("{bg-main,bg-green-500,bg-muted,bg-white}");
+@source inline("{text-white,text-text-sub}");
+@source inline("{border border-border}");
+
+@layer components {
+
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  a {
+    @apply
+    text-sm
+    font-medium
+  hover:text-text-sub
+    whitespace-nowrap
+    }
+
+  h1 {
+    @apply
+    text-text-sub
+    leading-relaxed
+    text-pretty
+    font-bold;
+  }
+
+  h2 {
+    @apply
+    text-text-sub
+    leading-relaxed
+    text-pretty
+    font-bold
+    text-3xl
+    md:text-4xl
+  }
+
+  h3 {
+    @apply
+    text-text-sub
+    leading-relaxed
+    text-pretty
+    font-bold
+    text-lg
+  }
+
+  h4 {
+    @apply
+    text-text-sub
+    leading-relaxed
+    text-pretty
+    font-bold
+    text-base
+  }
+
+  h5 {
+    @apply
+    uppercase
+    leading-relaxed
+    text-pretty
+    font-semibold
+    text-sm
+  }
+
+  p {
+    @apply
+    leading-relaxed
+    text-pretty
+  }
+
+  label {
+    @apply
+    text-sm
+    text-text-sub
+    font-semibold
+  }
+
+  input, textarea, select, option {
+    @apply
+    w-full
+    text-sm
+    bg-white
+    placeholder:text-text-main
+    px-3
+    py-2
+    text-text-sub
+    rounded-md
+    border
+    border-border
+    focus:border-main
+    focus:ring-1
+    focus:ring-main
+    focus:outline-none
+    transition-all
+    duration-75
   }
 }
 
 body {
   background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--color-text-main);
+  font-family: var(--font-inter);
 }

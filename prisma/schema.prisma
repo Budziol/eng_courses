@@ -1,0 +1,157 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../lib/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id             String          @id @default(cuid())
+  email          String          @unique
+  name           String
+  createdAt      DateTime        @default(now())
+  lastName       String
+  password       String
+  role           Role            @default(USER)
+  active         Boolean         @default(false)
+  activationCode ActivationCode?
+  level          Level?
+  meetings       Meeting[]
+  payments       Payment[]
+  sessions       Session[]
+  test           Test?
+
+  @@index([email])
+  @@index([name])
+  @@index([lastName])
+}
+
+model Payment {
+  id        String        @id @default(cuid())
+  userId    String
+  status    PaymentStatus @default(UNPAID)
+  paidAt    DateTime
+  paidTo    DateTime
+  createdAt DateTime      @default(now())
+  user      User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+}
+
+model ActivationCode {
+  id        String   @id @default(cuid())
+  userId    String   @unique
+  codeHash  String
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+}
+
+model Session {
+  id        String   @id @default(cuid())
+  userId    String
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+}
+
+model Level {
+  id        String   @id @default(cuid())
+  userId    String   @unique
+  speaking  Int      @default(0)
+  listening Int      @default(0)
+  reading   Int      @default(0)
+  writing   Int      @default(0)
+  Level     Lvl      @default(Unknown)
+  Lessons   Int      @default(0)
+  createdAt DateTime @default(now())
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+}
+
+model Meeting {
+  id        String        @id @default(cuid())
+  userId    String
+  date      DateTime
+  link      String
+  createdAt DateTime      @default(now())
+  status    MeetingStatus @default(SCHEDULED)
+  user      User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, date, status])
+}
+
+model Test {
+  id        String   @id @default(cuid())
+  userId    String    @unique
+  score     Int?
+  createdAt DateTime @default(now())
+
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  answers   TestAnswer[]
+}
+
+model TestAnswer {
+  id         String @id @default(cuid())
+  testId     String
+  questionId String
+  optionId   String
+
+  test       Test   @relation(fields: [testId], references: [id], onDelete: Cascade)
+    question   Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
+  option     Option   @relation(fields: [optionId], references: [id], onDelete: Cascade)
+}
+
+model Question {
+  id            String   @id @default(cuid())
+  questionText  String
+  questionLevel Lvl      @default(Unknown)
+  createdAt     DateTime @default(now())
+
+  options       Option[]
+  answers       TestAnswer[]
+}
+
+model Option {
+  id         String   @id @default(cuid())
+  questionId String
+  optionText String
+  isCorrect  Boolean  @default(false)
+
+  question   Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
+  answers    TestAnswer[]
+}
+
+enum PaymentStatus {
+  UNPAID
+  PAID
+}
+
+enum Role {
+  USER
+  ADMIN
+}
+
+enum Lvl {
+  Unknown
+  A1
+  A2
+  B1
+  B2
+  C1
+  C2
+  Beginner
+}
+
+enum MeetingStatus {
+  SCHEDULED
+  CANCELLED
+}
