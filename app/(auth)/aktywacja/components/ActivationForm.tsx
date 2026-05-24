@@ -1,3 +1,5 @@
+"use client";
+
 import {
   startTransition,
   useActionState,
@@ -5,12 +7,12 @@ import {
   useRef,
   useState,
 } from "react";
-import { PrimaryButton } from "../../../../components/Buttons";
 import {
   sendActivationCode,
   sendActivationCodeState,
 } from "@/app/(auth)/aktywacja/actions/activationCode";
 import { AnimatePresence, motion } from "motion/react";
+import { PrimaryButton } from "@/components/Buttons";
 
 const initialState: sendActivationCodeState = {};
 
