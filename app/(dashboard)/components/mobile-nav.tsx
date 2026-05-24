@@ -59,7 +59,7 @@ const MobileNav = () => {
             animate={{ y: 0 }}
             exit={{ y: "-120%" }}
             transition={{ type: "tween", duration: 0.4, ease: "easeInOut" }}
-            className="flex flex-col absolute left-0 top-0 w-full bg-white z-20  min-h-screen pt-15 pb-8 px-4"
+            className="flex flex-col absolute left-0 top-0 w-full bg-white z-20 min-h-dvh pt-15 pb-8 px-4"
           >
             <MobileMenu close={() => setIsOpen(false)} />
           </motion.div>
