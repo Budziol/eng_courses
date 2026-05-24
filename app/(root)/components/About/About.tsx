@@ -41,7 +41,7 @@ const About = () => {
           </div>
           <RevealItem>
             <div className="grid md:grid-cols-2 rounded-3xl overflow-hidden border border-border">
-              <div className="flex flex-col gap-10 p-12 bg-white">
+              <div className="flex flex-col gap-10 p-6 md:p-12 bg-white">
                 <RevealItem>
                   <h3 className="">Zacznij swoją przygodę dzisiaj</h3>
                 </RevealItem>
