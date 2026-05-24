@@ -60,7 +60,7 @@ const About = () => {
                   ))}
                 </ul>
               </div>
-              <div className="bg-main/20 p-12 flex items-center justify-center">
+              <div className="bg-main/20 p-6 md:p-12 flex items-center justify-center">
                 <div className="bg-white rounded-lg border border-border p-6 shadow-lg max-w-sm w-full ">
                   <RevealItem>
                     <div className="flex items-center gap-3 mb-4">
