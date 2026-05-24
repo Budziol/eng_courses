@@ -24,6 +24,8 @@
 @source inline("{text-white,text-text-sub}");
 @source inline("{border border-border}");
 
+@variant dark (false);
+
 @layer components {
 
 }
@@ -33,7 +35,7 @@
     scroll-behavior: smooth;
     color-scheme: light;
   }
-
+/*  */
   a {
     @apply
     text-sm
