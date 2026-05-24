@@ -31,8 +31,9 @@
 }
 
 @layer base {
-:root {
-  color-scheme: light !important;
+body {
+  color-scheme: light;
+  forced-color-adjust: none;
 }
   
   html {
